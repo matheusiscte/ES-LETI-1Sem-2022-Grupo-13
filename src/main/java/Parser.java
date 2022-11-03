@@ -20,7 +20,9 @@ public class Parser{
 		String webcal = "webcal://fenix.iscte-iul.pt/publico/publicPersonICalendar.do?method=iCalendar&username=mpclq@iscte.pt&password=xmL473npYB7oemMN431WH9nEJRIctc1xGX20iWj2peknw6XJ6XL3yJuTfbSwpO9gE64qIekOJtyhfGeFFWBwElxA6zxz14SHNsKbx4LZIX56YjhMvYa1hQQRFDoA53W8\r\n";
 
 		webcal  = webcal.replace("webcal:", "https:");
+		//cria um objecto do tipo URL baseado na string que damos
 		URL url = new URL(webcal);
+		//copia para um ficheiro o que o link nos dá
 		Files.copy(url.openStream(), Paths.get("webcal.txt"), REPLACE_EXISTING);
 
 		try {	

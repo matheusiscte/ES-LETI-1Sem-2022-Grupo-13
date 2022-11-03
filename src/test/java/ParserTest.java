@@ -1,5 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.IOException;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -25,8 +27,9 @@ class ParserTest {
 	}
 
 	@Test
-	void test() {
-		
+	void testParser() throws IOException {
+		Parser obj = new Parser();
+		obj.parser();
 	}
 
 }
